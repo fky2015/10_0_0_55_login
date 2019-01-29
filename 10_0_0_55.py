@@ -10,6 +10,7 @@ import json
 from hashlib import sha1
 from requests import Session
 from support import xencode, get_host_ip, fkbase64
+import os
 
 class User:
     """登录校园网"""
@@ -102,4 +103,8 @@ def main():
         pprint(user.logout())
 
 if __name__ == '__main__':
+    
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
     main()
