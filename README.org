@@ -25,3 +25,10 @@
 ** 依赖
    - python 3.6+
    - requests
+
+** NetworkManager 添加自动连接脚本
+   #+begin_src bash :results output
+     sudo cp 90-BIT_login.sh /etc/NetworkManager/dispatcher.d/
+     sudo chmod 755 /etc/NetworkManager/dispatcher.d/90-BIT_login.sh
+     sudo chown root:root /etc/NetworkManager/dispatcher.d/90-BIT_login.sh
+   #+end_src
